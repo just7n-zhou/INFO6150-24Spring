@@ -1,0 +1,145 @@
+html, body {
+    background-color: papayawhip;
+    color: black;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: burlywood;
+}
+
+footer {
+    background-color: burlywood;
+}
+
+/* Mobile CSS */
+/* header style */
+header {
+    display: grid;
+    grid-template-areas: 
+        "header_logo header_title none"
+        "header_link header_link header_link" ;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.header_logo {
+    grid-area: header_logo;
+
+    margin-left: 1rem;
+    padding: 1rem;
+}
+
+.header_title {
+    grid-area: header_title;    
+    place-content: center;
+    justify-content: center;
+
+    padding: 1rem;
+}
+
+.headerTitleText {
+    display: flex;
+    place-content: center;
+}
+
+.header_nav {
+    grid-area: header_link;
+}
+
+.header_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+/* main style */
+.main_title {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.cardset{
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    grid-row: span 4;
+    display: flex;
+    flex-direction: column;
+
+    place-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1rem;
+
+    background-color: whitesmoke;
+}
+
+.card__link {
+    background-color: rebeccapurple;
+    color: white;
+    
+    border-radius: 8px;
+    border: 1px solid peachpuff;
+    padding: 0.5rem;
+    margin-top: auto;
+}
+
+.card__link:hover {
+    background-color: palegoldenrod;
+    border: 1px solid burlywood;
+    color: black;
+}
+
+/* footer */
+.footer_links {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    place-items: center;
+
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.footer_link {
+    grid-row: span 4;
+    list-style-type: none;
+}
+
+/* Desktop CSS */
+@media (min-width: 50rem) {
+
+    /* header modification */
+    .header_links {
+        flex-direction: row;
+    }
+
+    /* main modification */
+    .cardset {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .card {
+        grid-column: span 4;
+        grid-row: span 12;
+    }
+
+    /* footer modification */
+    .footer_links {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .footer_link {
+        grid-column: span 4;
+    }
+}

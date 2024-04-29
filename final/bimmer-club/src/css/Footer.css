@@ -1,0 +1,35 @@
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+.footer_links {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 1fr;
+}
+
+.footer_link {
+    color: white;
+    grid-row: span 4;
+    padding: 1rem 0;
+}
+.footer_link:hover {
+    background-color: var(--color--hover-bg);
+    color: black;
+}
+
+/* Desktop styling */
+@media (min-width: 48rem) {
+    .footer_links {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+    }
+    
+    .footer_link {
+        color: white;
+        grid-column: span 4;
+        padding: 2rem 0;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Basic-form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title></title>
+        <link rel="stylesheet" href="css/register_styles.css"/>
+    </head>
+    <body class="body_wraper">
+        <header>
+            <a href="index.html">
+                <img class="header_logo" src="pictures/capy2.jpg" alt="A capyabara with sunglasses">
+            </a>            
+            <div class="header_title">
+                <h1 class="headerTitleText">Join the Capybara Community!</h1>
+            </div>
+            <nav class="header_nav">
+                <ul class="menu">
+                    <li class="menu_item">
+                        <button class="nav_toggle" type="button">Menu</button>
+                        <ul class="submenu">
+                            <li class="submenu_item"><a class="header_link" href="index.html">Home</a></li>
+                            <li class="submenu_item"><a class="header_link" href="about.html">About</a></li>
+                            <li class="submenu_item"><a class="header_link" href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_item">
+                        <button class="nav_toggle" type="button">External Links</button>
+                        <ul class="submenu">
+                            <li class="submenu_item"><a class="header_link" href="#">Species</a></li>
+                            <li class="submenu_item"><a class="header_link" href="#">History</a></li>
+                            <li class="submenu_item"><a class="header_link" href="#">Why Capybara</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <h2 class="main_title">Register for Capybara Image Email!</h2>
+            <form action="/submit" method="POST" class="register">
+                <label for="name" class="register_label">Name:<span class="required_star">*</span></label>
+                <input name="name" type="text" class="register_input" required>
+                
+                <label for="email" class="register_label">Email:<span class="required_star">*</span></label>
+                <input name="email" type="email" class="register_input" required>
+                
+                <label for="annoy-me" class="register_label">Do you want us to send you annoying emails?</label>
+                <input name="annoy-me" type="checkbox" class="register_input" checked>
+                    
+                <label for="tier" class="register_label">Membership Tier:<span class="required_star">*</span></label>
+                <select name="tier" class="register_input" required>
+                    <option value="" selected disabled>Please select</option>
+                    <option value="1">Silver Tier</option>
+                    <option value="2">Gold Tier</option>
+                    <option value="3">Platinum Tier</option>
+                </select>
+            
+                <button class="register_submit" type="submit">Register</button>
+                <a class="required"><span class="required_star">*</span>This is a required field</a>
+            </form>
+        </main>
+
+        <footer>
+            <p>This is a project site build with NEU INFO6150 Spring 2024, all contents are for educational purposes</p>
+            <a class="footer_link" href="privacy.html">Privacy Policy</a>
+        </footer>
+    </body>

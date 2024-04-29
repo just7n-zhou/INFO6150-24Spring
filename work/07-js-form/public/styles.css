@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+
+    background-color: papayawhip;
+    color: black;
+
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+/* Mobile styling */
+.header {
+    background-color: goldenrod;
+    text-align: center;
+    padding: 1rem;
+}
+
+.main {
+    margin: 1rem;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    background-color: whitesmoke;
+    
+    max-width: 30rem;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 5rem auto;
+}
+
+.register_label{
+    display: flex;
+    flex-direction: column;
+
+    margin: 1rem 12px 6px 12px;
+    
+    padding-right: 0;
+}
+
+.label{
+    margin-bottom: 6px;
+}
+
+.register_input{
+    padding: 2px;
+}
+
+.required_star{
+    color: red;
+}
+.required_text{
+    color: red;
+    margin: 4px 8px;
+}
+
+.register_error{
+    display: block;
+    background-color: #ff000066;
+
+    border-radius: 2px;
+    padding: 6px;
+    margin: 0 12px 3px 10px;
+}
+
+.register_error:empty{
+    display: none;
+}
+
+.register_submit{
+    padding: 8px;
+    margin: 12px 12px;
+    margin-top: 10rem;
+
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+}
+.register_submit:hover{
+    cursor: pointer;
+    background-color: greenyellow;
+    color: black;
+}
+.required_star, .required{
+    margin: 4px 8px;
+    text-align: left;
+    color: red;
+}
+
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Desktop Styling */
+@media (min-width: 40rem){
+    .register {
+        display: flex;
+        flex-direction: column; 
+        height: 30rem;
+    }
+    
+    .register_label {
+        display: flex;
+        /* grid-template-columns: auto 1fr; */
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .register_input {
+        width: 75%;
+    }
+
+    .register_check {
+        width: 50%;
+        margin-right: 2.5rem;
+    }
+    
+    .tier_options {
+        width: 50%;
+        margin-right: 2.5rem;
+    }
+
+    .register_submit {
+        margin-top: auto;
+    }
+}
+

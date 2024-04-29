@@ -1,0 +1,120 @@
+html, body {
+  background-color: papayawhip;
+  color: black;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Mobile CSS */
+/* header style */
+header {
+  display: grid;
+  grid-template-areas: 
+      "header_logo header_title header_nav";
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: burlywood;
+}
+.header_logo {
+  grid-area: header_logo;
+
+  padding: 1rem;
+}
+.header_title {
+  grid-area: header_title;    
+  place-content: center;
+
+  padding: 1rem;
+}
+.headerTitleText {
+  display: flex;
+  place-content: center;
+}
+.header_nav {
+  grid-area: header_nav;
+  justify-content: center;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0;
+  list-style: none;
+}
+.menu_item {
+  position: relative;
+  padding: 0;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+.menu_item button { 
+  border: none;
+  background: inherit; 
+  color: blue;
+  cursor: pointer; 
+  text-decoration: underline;
+  margin-left: 8px;
+}
+.menu_item:hover .submenu,
+.menu_item:focus-within .submenu{
+  max-height: inherit;
+}
+.submenu {
+  position: absolute;
+  background-color: papayawhip;
+
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+
+  overflow: hidden;
+  list-style-type: none;
+}
+.submenu_item {
+  padding: 6px;
+  margin: 0;
+  text-align: center;
+}
+.header_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+/* main style */
+main {
+  padding: 1rem;
+}
+
+/* footer */
+/* footer styling */
+footer {
+  background-color: burlywood;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Desktop CSS */
+@media (min-width: 50rem) {
+
+  /* header modification */
+  .header_links {
+      flex-direction: row;
+  }
+
+
+  /* footer modification */
+  .footer_links {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+  }
+
+  .footer_link {
+      grid-column: span 4;
+  }
+}

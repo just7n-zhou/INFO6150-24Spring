@@ -1,0 +1,106 @@
+/* Mobile CSS */
+
+.main_title {
+    text-align: center;
+    color: black;
+
+    padding-top: 2rem;
+    margin: 0;
+}
+
+.cardset{
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+
+    padding:1rem;
+    padding-top: 0;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.card_title {
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    
+    padding: 0.5rem;
+    margin-top: 1rem;
+
+    color: black;
+}
+
+
+.card__image_P {
+    display: block;
+    border-radius: 4px;
+
+    width: 200px;
+    height: 200px;
+
+    float: right;
+}
+
+.card__description {
+    margin: 1rem;
+}
+
+.subscribe-button {    
+    margin: 0.5rem 0;
+
+    cursor: pointer;
+
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.subscribe-button:hover {
+    border: 2px solid dodgerblue;
+    background-color: dodgerblue;
+    color: white;
+}
+.Subscribed{
+    border: 2px solid dodgerblue;
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Desktop CSS */
+
+@media (min-width: 48rem) {
+    .cardset {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    
+        align-content: start;
+    
+        padding: 1rem;
+        padding-top: 0;
+        gap: 1rem;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+    
+        margin: 1rem 0 0 0;
+    }
+    .card__title {
+        text-align: center;
+        margin: 0.25rem 1rem;
+    }
+    .card__image_P {
+        margin: 0.5rem;
+    }
+}

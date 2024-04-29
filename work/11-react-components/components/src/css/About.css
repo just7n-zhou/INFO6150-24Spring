@@ -1,0 +1,27 @@
+.main_about {
+    background-image: url("../pics/Background_Portrait_3.jpg");
+    background-size: 100%;
+    background-position: center; 
+
+    color: #eee;
+
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_title_about{
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0;
+}
+
+.card__description_about {
+    text-align: center;
+
+    padding: 3rem;
+    margin: 0;
+}

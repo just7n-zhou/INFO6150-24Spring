@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title></title>
+        <link rel="stylesheet" href="css/donate.css"/>
+        <script defer src="js/donate.js"></script>
+    </head>
+    <body class="body_wraper">
+        <header class="header">
+            <a class="header_logo" href="index.html" tabindex="0">
+                <img  class="logo_img" src="pics/BMW_Logo1.jpg" width=75 height=75 alt="A BMW Logo">
+            </a>
+            <div class="header_title">
+                <a class="skip_to_main" href="#main">SKIP TO MAIN</a>
+                <h1 class="headerTitleText">Bimmer Club</h1>
+            </div>
+            <nav class="header_nav">
+                <button  class="menu_button" type="button">
+                    <img class="hamburger_menu menu_toggle" src="pics/menu_icon.png" width=20 height=20 alt="hamburger menu"> 
+                </button>
+                <ul class="submenu">
+                    <li class="submenu_item"><a class="header_link" href="index.html">Home</a></li>
+                    <li class="submenu_item"><a class="header_link" href="cats.html">BMWs</a></li>
+                    <li class="submenu_item"><a class="header_link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main" id="main">
+            <h2 class="main_title">Become a BimSupporter today</h2>
+            <form class="register" action="/subscribe" method="post">
+                <label class="register_label">
+                    <span class="label register_name_label">Username:<span class="required_star">*</span></span>
+                    <input name="name" type="text" class="register_input register_username">
+                </label>
+                <span class="register_error register_error_username"></span>
+
+                <label class="register_label">
+                    <span class="label register_email_label">Email:<span class="required_star">*</span></span>
+                    <input name="email" type="text" class="register_input register_email">
+                </label>
+                <span class="register_error register_error_email"></span>
+
+                <label class="register_label">
+                    <span class="label register_confirm_label">Confirm Email:</span>
+                    <input name="confirm" type="text" class="register_input register_confirm">
+                </label>
+                <span class="register_error register_error_confirm"></span>
+
+                <label class="register_label">
+                    <span class="label register_check_label">Want to grow the Bimmer Community?</span>
+                    <input name="want_support" type="checkbox" class="register_input register_check" checked>
+                </label>
+
+                <label class="register_label">
+                    <span class="label register_tier_label">Support Tier:</span>
+                    <select name="tier" class="register_input tier_options">
+                        <option value="" selected disabled>Please select</option>
+                        <option value="1">Anonymous Supporter: $10</option>
+                        <option value="2">Advocate Supporter: $100</option>
+                        <option value="3">Champion Supporter: $1000</option>
+                    </select>
+                </label>
+                <a class="required_text"><span class="required_star">*</span>This is a required field</a>
+                <button class="register_submit" type="submit">Register</button>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <div class="footer_links">
+                <a class="footer_link" href="about.html">Privacy Policy</a>
+                <a class="footer_link" href="donate.html">Support us</a>
+                <a class="footer_link" href="explore.html">Explore BMW</a>
+            </div>
+        </footer>
+    </body>
+</html>

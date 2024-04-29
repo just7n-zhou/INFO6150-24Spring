@@ -1,0 +1,91 @@
+.main_explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: black;
+}
+
+
+.explore_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: 1px solid black;
+}
+
+.explore_accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 100%;
+    color: white;
+}
+
+.accordion_button {
+    justify-self: center;
+
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-style: inset 3px;
+    border-radius: 3px;
+    
+    background-color: black;
+    color: white;
+    padding: 3rem;
+}
+
+.accordion_section {
+    align-content: center;
+    margin-right: 5rem;
+}
+
+.accordion_section_hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.explore_description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    
+    font-size: x-large;
+    list-style-type: none;
+
+
+}
+
+.accordion_image {
+    width: 200px;
+    height: 200px;
+
+    align-self: flex-end;
+}
+
+@media (max-width: 48rem){
+    .explore_card {
+        flex-direction: column;
+    }
+    .accordion_section {
+        margin-right: 0;;
+    }
+    .explore_accordion {
+        flex-direction: column;
+    }
+    .explore_description {
+        flex-direction: column;
+        font-size: large;
+    }
+
+}
+
+

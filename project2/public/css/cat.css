@@ -1,0 +1,407 @@
+html, body {
+    margin: 0;
+
+    color: black;
+    background-color: #eee;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* ********** */
+/* Mobile CSS */
+/* ********** */
+
+/** header styling **/
+header {
+    display: grid;
+    grid-template-areas: 
+        "header_logo header_title header_nav"
+        "header_logo header_link header_nav" ;
+    grid-template-columns: 1fr 4fr 1fr;
+    background-color: black;
+}
+
+.header_logo {
+    grid-area: header_logo;
+    width: 100px;
+    height: 100px;
+    padding: 0 1rem 1rem 0;
+}
+.logo_img {
+    margin: 1rem;
+}
+
+.header_title {
+    grid-area: header_title;    
+    place-content: center;
+
+    padding: 1rem;
+    margin: 0 1rem;
+}
+.headerTitleText {
+    display: flex;
+    place-content: center;
+    color: white;
+
+
+}
+
+.skip_to_main { 
+    position: absolute;
+    background: dodgerblue;
+
+    height: 15px;
+    padding: 0;
+    left: 41%;
+
+    transform: translateY(-250%);
+    /* transition: transform 0.3s; */
+
+    text-decoration: none;
+    color: white;
+  }
+  
+.skip_to_main:focus {
+    transform: translateY(0%);
+}
+
+.header_nav {
+    grid-area: header_nav;
+
+    display: flex;
+    background-color: inherit;
+    justify-content: center;
+    list-style: none;
+    flex-direction: row;
+    
+    padding: 1rem 0;
+    margin: 0 1rem;
+}
+
+.menu_button { 
+    border: none;
+    background: inherit; 
+    text-decoration: underline;
+    margin: 2rem 2rem 0 0;
+    height: 1.2rem;
+
+    tabindex: 0;
+}
+.hamburger_menu {
+    height: 1rem;
+
+    cursor: pointer;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #eee;
+
+    max-height: 0;
+    padding-left: 0;
+    margin: 3.2rem 2rem 0 0;
+
+    overflow: hidden;
+    list-style-type: none;
+    visibility: hidden; 
+    opacity: 0;
+}
+.submenu_open {
+    max-height: 6.5rem; 
+    visibility: visible; 
+    opacity: 1; 
+}
+@media (prefers-reduced-motion: no-preference) {
+    .submenu, .submenu_open {
+        transition: opacity 0.5s, max-height 0.5s, visibility 0.5s; 
+    }
+}
+.submenu_item {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.submenu_item:hover {
+    background-color: dodgerblue; 
+}
+.submenu_item:hover .header_link{
+    color: white; 
+}
+.header_link {
+    color: black;
+    text-decoration: none;
+}
+
+
+/** main styling **/
+
+.main_title {
+    text-align: center;
+    color: black;
+
+    padding-top: 2rem;
+    margin: 0;
+}
+
+.cardset{
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+
+    padding:1rem;
+    padding-top: 0;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.card_title {
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    
+    padding: 0.5rem;
+    margin-top: 1rem;
+
+    background-color: #eee;
+    color: black;
+}
+
+
+.card__image_P {
+    display: block;
+    border-radius: 4px;
+
+    width: 200px;
+    height: 200px;
+
+    float: right;
+}
+
+.card__description {
+    margin: 1rem;
+}
+
+.subscribe-button {    
+    margin: 0.5rem 0;
+
+    cursor: pointer;
+
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.subscribe-button:hover {
+    border: 2px solid dodgerblue;
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+/** dialog styling **/
+.modal {
+    padding: 0;
+}
+.model::backdrop {
+    background-color: black opacity(0.7);
+}
+.modal_title {
+    text-align: center;
+    margin: 2rem 2rem 0 2rem;
+}
+.register {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+}
+.register_label {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1rem 0 0 0;
+}
+.required_star {
+    color: red;
+}
+
+.register_error {
+    display: block;
+    margin-top: 0.25rem;
+    background-color: #ff000066;
+}
+
+.modal_buttons {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+.modal_subscribe {
+    border: none;
+    padding: 1rem 3.5rem;
+    color:black
+}
+.modal_subscribe:hover {
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+}
+.modal_close {
+    background-color: #eee;
+    border: none;
+    padding: 1rem 4.4rem;
+    color:black
+}
+.modal_close:hover {
+    background-color: red;
+    color: #eee;
+    cursor: pointer;
+}
+
+/** footer styling **/
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+.footer_links {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 1fr;
+}
+
+.footer_link {
+    color: white;
+    grid-row: span 4;
+    padding: 1rem 0;
+}
+.footer_link:hover {
+    background-color: dodgerblue;
+    color: black;
+}
+
+/* *********** */
+/* Desktop CSS */
+/* *********** */
+
+@media (min-width: 44rem) {
+
+    /* header modification */
+    .header_title {
+        padding: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .headerTitleText {
+        margin: 1rem 0;
+    }
+    
+    .skip_to_main { 
+        left: 45%;
+        transform: translateY(-100%);
+    }
+    .skip_to_main:focus {
+        transform: translateY(-20%);
+    }
+
+    .header_nav {
+        grid-area: header_link;
+
+        height: 1rem;
+        padding: 0;
+        margin: 0 0 1rem 0;
+    }
+    
+    .menu_button {
+        display: none;
+    }
+    .submenu {
+        display: flex;
+        flex-direction: row;
+
+        position: static; 
+        max-height: none;
+        height: auto;
+
+        visibility: visible; 
+        opacity: 1;
+        overflow: visible;
+
+        
+        justify-content: center;
+        transition: none;
+
+        margin:0 0 2rem 1rem; 
+    }
+    .submenu_item {
+        padding: 0;
+        margin: 0;
+    }
+    .submenu_item:hover .header_link{
+        color: black; 
+    }
+    .header_link {
+        padding: 1.1rem 5rem;
+        color: white;
+    }
+    .header_link:hover {
+        background-color: dodgerblue; 
+    }
+
+
+    /* main modification */
+    .cardset {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        align-content: start;
+
+        padding: 1rem;
+        padding-top: 0;
+        gap: 1rem;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+
+        margin: 1rem 0 0 0;
+    }
+    .card__title {
+        text-align: center;
+        margin: 0.25rem 1rem;
+    }
+    .card__image_P {
+        margin: 0.5rem;
+    }
+
+    /* footer modification */
+    .footer_links {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+    }
+    
+    .footer_link {
+        color: white;
+        grid-column: span 4;
+        padding: 2rem 0;
+    }
+}

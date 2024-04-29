@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title></title>
+        <link rel="stylesheet" href="css/cat.css"/>
+        <script defer src="js/cats.js"></script>
+    </head>
+    <body class="body_wraper">
+        <header class="header">
+            <a class="header_logo" href="index.html" tabindex="0">
+                <img  class="logo_img" src="pics/BMW_Logo1.jpg" width=75 height=75 alt="A BMW Logo">
+            </a>
+            <div class="header_title">
+                <a class="skip_to_main" href="#main">SKIP TO MAIN</a>
+                <h1 class="headerTitleText">Bimmer Club</h1>
+            </div>
+            <nav class="header_nav">
+                <button  class="menu_button" type="button">
+                    <img class="hamburger_menu menu_toggle" src="pics/menu_icon.png" width=20 height=20 alt="hamburger menu"> 
+                </button>
+                <ul class="submenu">
+                    <li class="submenu_item"><a class="header_link" href="index.html">Home</a></li>
+                    <li class="submenu_item"><a class="header_link" href="cats.html">BMWs</a></li>
+                    <li class="submenu_item"><a class="header_link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <h2 class="main_title">BMW in the Spotlight</h2>
+            <div class="cardset">
+                <div class="card">
+                    <h3 class="card__title">The Iconic BMW M3</h3>    
+                    <img class="card__image_P" src="pics/BMW_1_Portrait.jpg" alt="A rear side view BMW M3"> 
+                    <p class="card__description">A legacy of high-performance and luxury, the BMW M3 is celebrated for its dynamic driving experience and advanced engineering. A true driver's car with a rich motorsport heritage.</p>
+                    <button type="button" class="subscribe-button">Subscribe</button>
+                </div>
+
+                <div class="card">
+                    <h3 class="card__title">The Elegant BMW M4</h3>
+                    <img class="card__image_P" src="pics/BMW_2_Portrait.jpg" alt="A front view BMW M4"> 
+                    <p class="card__description">Sleek design meets cutting-edge performance in the BMW M4, offering exhilarating speed and precision handling. It embodies the essence of a modern sports coupe.</p>
+                    <button type="button" class="subscribe-button">Subscribe</button>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">The Ultimate BMW M5</h3>
+                    <img class="card__image_P" src="pics/BMW_3_Portrait.jpg" alt="A front view BMW M5"> 
+                    <p class="card__description">Unmatched performance in a luxury sedan, the BMW M5 sets new standards for power, combining comfort with the capability of a high-performance sports car.</p>
+                    <button type="button" class="subscribe-button">Subscribe</button>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">The Dynamic BMW M2</h3>
+                    <img class="card__image_P" src="pics/BMW_4_Portrait.jpg" alt="A rear view BMW M2"> 
+                    <p class="card__description">Compact power in its purest form, the BMW M2 is famed for its agility and precision. A thrilling drive that pays homage to the brand's racing lineage.</p>
+                    <button type="button" class="subscribe-button">Subscribe</button>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">The Versatile BMW X3</h3>
+                    <img class="card__image_P" src="pics/BMW_5_Portrait.jpg" alt="A front view of BMW X3"> 
+                    <p class="card__description">Adventure meets luxury and style in the BMW X3. This SUV combines robust performance with the sophistication and comfort expected from BMW.</p>
+                    <button type="button" class="subscribe-button">Subscribe</button>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">The Futuristic BMW i8</h3>
+                    <img class="card__image_P" src="pics/BMW_6_Portrait.jpg" alt="A font side view of BMW i8"> 
+                    <p class="card__description">Innovative hybrid technology, striking design, the BMW i8 is a symbol of future mobility. Released long before TESLA was popular. Its eco-friendly performance does not compromise on speed or luxury.</p>
+                    <button type="button" class="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+        </main>
+
+        <dialog class="modal">
+                <h2 class="modal_title">Subscribe to Bimmer Club</h2>
+                <form class="register" action="/subscribe" method="post">
+                    <label class="register_label">
+                        <span class="label register_email_label">Email:<span class="required_star">* required field</span></span>
+                        <input name="email" type="text" class="register_input register_email">
+                    </label>
+                    <span class="register_error register_error_email"></span>
+
+                    <label class="register_label">
+                        <span class="label register_confirm_label">Confirm Email:<span class="required_star">* required field</span></span>
+                        <input name="confirm" type="text" class="register_input register_confirm">
+                    </label>
+                    <span class="register_error register_error_confirm"></span>
+                    <div class="modal_buttons">
+                        <button class="modal_subscribe" type="submit">Subscribe</button>
+                        <button class="modal_close" type="button">Close</button>
+                    </div>
+                </form>
+        </dialog>
+        
+        <footer class="footer">
+            <div class="footer_links">
+                <a class="footer_link" href="privacy.html">Privacy Policy</a>
+                <a class="footer_link" href="donate.html">Support us</a>
+                <a class="footer_link" href="explore.html">Explore BMW</a>
+            </div>
+        </footer>
+    </body>
+</html>

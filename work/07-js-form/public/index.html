@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title></title>
+        <script defer src="form.js"></script>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body class="body_wraper">
+        <header class="header">
+            <h1 class="header_title">Spam Subscriber</h1>
+        </header>
+
+        <main class="main">
+            <form class="register" action="/register" method="POST">
+                <label class="register_label">
+                    <span class="label register_name_label">Username:<span class="required_star">*</span></span>
+                    <input name="name" type="text" class="register_input register_username">
+                </label>
+                <span class="register_error register_error_username"></span>
+
+
+
+                <label class="register_label">
+                    <span class="label register_email_label">Email:<span class="required_star">*</span></span>
+                    <input name="email" type="text" class="register_input register_email">
+                </label>
+                <span class="register_error register_error_email"></span>
+
+                <label class="register_label">
+                    <span class="label register_confirm_label">Confirm Email:</span>
+                    <input name="confirm" type="text" class="register_input register_confirm">
+                </label>
+                <span class="register_error register_error_confirm"></span>
+
+                <label class="register_label">
+                    <span class="label register_check_label">Want some spam emails?</span>
+                    <input name="wants-spam" type="checkbox" class="register_input register_check" checked>
+                </label>
+
+                <label class="register_label">
+                    <span class="label register_tier_label">Membership Tier:</span>
+                    <select name="tier" class="register_input tier_options">
+                        <option value="" selected disabled>Please select</option>
+                        <option value="1">Small spam</option>
+                        <option value="2">Large spam</option>
+                        <option value="3">Mega spam</option>
+                    </select>
+                </label>
+                <a class="required_text"><span class="required_star">*</span>This is a required field</a>
+
+
+                <button class="register_submit" type="submit">Register</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>We don't really care about your privacy, we just annoy you with emails.</p>
+            <a class="footer_link" href="privacy.html">Privacy Policy</a>
+        </footer>
+    </body>

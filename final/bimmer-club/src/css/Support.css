@@ -1,0 +1,162 @@
+
+/* Mobile Styling */
+.main_support {
+    margin: 1rem;
+}
+
+.main_title_support {
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+.main_description_support {
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 1rem;
+}
+.distinct_text_support {
+    
+    color: var(--color--hover-bg);
+}
+
+.register_support{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    
+    max-width: 35rem;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin: 3rem auto;
+}
+.register_label_support{
+    display: flex;
+    flex-direction: column;
+
+    margin: 12px 10px 6px;
+    
+    padding-right: 0;
+}
+.choose_model{
+    margin-top: 6px;
+}
+
+
+.register_input_label_support {
+    margin-bottom: 0.5rem;
+}
+
+.register_check_label_support {
+    width: 100%;
+}
+.register_input_support{
+    padding: 2px;
+}
+.register_check_support {
+    margin-top: 0.5rem;
+    height: 1.5rem;
+}
+
+.register_tier_title_support {
+    text-align: center;
+    margin: 0;
+}
+.register_tier_label_support {
+    margin: 0.4rem 0;
+}
+.tier_options_support {
+    margin-top: 2px;
+}
+.register_otherinput_support {
+    margin: 12px 10px 6px;
+    padding: 2px;
+}
+
+.required_star_support{
+    color: red;
+}
+.required_text_support{
+    color: red;
+    margin: 1rem 0.5rem;
+}
+
+.register_error_support{
+    display: block;
+    background-color: #ff000066;
+
+    border-radius: 2px;
+    padding: 4px;
+    margin: 0 10px 2px 10px;
+}
+
+.register_submit_support{
+    padding: 8px;
+    margin: 12px 12px;
+    margin-top: 3rem;
+
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+}
+.register_submit_support:hover{
+    cursor: pointer;
+    background-color: dodgerblue;
+    color: black;
+}
+.required_star_support, .required_support{
+    margin: 4px 8px;
+    text-align: left;
+    color: red;
+}
+.thx_message_support {
+    text-align: center;
+    margin: 1rem;
+    color: dodgerblue
+}
+
+/* Desktop Styling */
+@media (min-width: 48rem) {
+    .register_support {
+        display: flex;
+        flex-direction: column; 
+        height: auto;
+    }
+    
+    .register_label_support {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .choose_series{
+        flex-direction: column;
+    }
+    .choose_model {
+        flex-direction: column;
+    }
+    .model_tier{
+        width: auto;
+    }
+    .register_name_label_support {
+        margin-bottom: 0.5rem;
+    }
+    .register_input_support {
+        width: 70%;
+    }
+    
+    .register_check_support {
+        width: 30%;
+        margin: 0;
+    }
+    
+    .tier_options_support {
+        width: 100%;
+        margin-right: 2.5rem;
+    }
+    
+    .register_submit_support {
+        margin-top: 3rem;
+    }
+    
+}

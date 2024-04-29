@@ -1,0 +1,106 @@
+.global-nav {
+    background-color: black;
+    padding-bottom: 1rem;
+}
+
+/* Mobile Styling */
+.menu_button { 
+    border: none;
+    background: inherit; 
+    text-decoration: underline;
+    margin: 2rem 2rem 0 1.5rem;
+    height: 1.2rem;
+
+}
+.hamburger_menu {
+    height: 1rem;
+
+    cursor: pointer;
+}
+
+.global-nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: var(--color--page-bg);
+    list-style-type: none;
+
+    position: absolute;
+    max-height: 0;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    visibility: hidden; 
+    opacity: 0;
+}
+.global-nav__list--open {
+    max-height: 6rem; 
+    visibility: visible; 
+    opacity: 1;
+}
+.global-nav__list, .global-nav__list--mobile-hidden {
+    transition: opacity 0.5s, max-height 0.5s, visibility 0.5s; 
+}
+
+.global-nav__item {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    text-align: center;
+}
+.global-nav__item:hover {
+    background-color: var(--color--hover-bg);
+}
+.global-nav__item:hover .global-nav__link {
+    color: white;
+}
+.global-nav__link {
+    color: black;
+    text-decoration: none;
+}
+
+/* Desktop Styling  */
+@media (min-width: 44rem) {
+    .global-nav {
+        background-color: black;
+    }
+    .global-nav__toggle {
+        display: none;
+    }
+    .global-nav__list {
+        flex-direction: row;
+        position: static;
+        max-height: none;
+        background-color: var(--color--header-bg);
+
+        visibility: visible; 
+        opacity: 1;
+        overflow: visible;
+    }
+    .global-nav__list--mobile-hidden {
+        display: flex;
+    }
+    .global-nav__list, .global-nav__list--mobile-hidden {
+        transition: opacity 0.5s, max-height 0.5s, visibility 0.2s; 
+    }
+
+    .global-nav__item {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .global-nav__item:hover .global-nav__link{
+        color: black;
+    }
+    .global-nav__link {
+        padding: 1.05rem 5rem;
+        color: white;
+    }
+    .global-nav__link:hover {
+        background-color: var(--color--hover-bg);
+    }
+
+}

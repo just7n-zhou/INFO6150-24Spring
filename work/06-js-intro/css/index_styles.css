@@ -1,0 +1,178 @@
+html, body {
+    background-color: papayawhip;
+    color: black;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Mobile CSS */
+/* header style */
+header {
+    display: grid;
+    grid-template-areas: 
+        "header_logo header_title header_nav";
+    grid-template-columns: 1fr 4fr 1fr;
+    background-color: burlywood;
+}
+.header_logo {
+    grid-area: header_logo;
+
+    padding: 1rem;
+}
+.header_title {
+    grid-area: header_title;    
+    place-content: center;
+
+    padding: 1rem;
+}
+.headerTitleText {
+    display: flex;
+    place-content: center;
+}
+.header_nav {
+    grid-area: header_nav;
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 0;
+    list-style: none;
+}
+.menu_item {
+    position: relative;
+    padding: 0;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+.nav_button { 
+    border: none;
+    background: inherit; 
+    color: blue;
+    cursor: pointer; 
+    text-decoration: underline;
+    margin-left: 8px;
+}
+/* .menu_item:hover .submenu_active, */
+.submenu.active{
+    max-height: inherit;
+}
+.submenu {
+    position: absolute;
+    background-color: papayawhip;
+
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+    list-style-type: none;
+}
+.submenu_item {
+    padding: 6px;
+    margin: 0;
+    text-align: center;
+}
+.header_link:hover,
+.header_link:focus{
+    background-color: blue;
+    color:white;
+}
+.header_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+/* main style */
+.main_title {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.cardset{
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    grid-row: span 4;
+    display: flex;
+    flex-direction: column;
+
+    place-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1rem;
+
+    background-color: whitesmoke;
+}
+
+.card__image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card__link {
+    background-color: rebeccapurple;
+    color: white;
+    
+    border-radius: 8px;
+    border: 1px solid peachpuff;
+    padding: 0.5rem;
+    margin-top: auto;
+}
+
+.card__link:hover {
+    background-color: palegoldenrod;
+    border: 1px solid burlywood;
+    color: black;
+}
+
+/* footer */
+/* footer styling */
+footer {
+    background-color: burlywood;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Desktop CSS */
+@media (min-width: 50rem) {
+
+    /* header modification */
+    .header_links {
+        flex-direction: row;
+    }
+
+    /* main modification */
+    .cardset {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .card {
+        grid-column: span 4;
+        grid-row: span 12;
+    }
+
+    /* footer modification */
+    .footer_links {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .footer_link {
+        grid-column: span 4;
+    }
+}
