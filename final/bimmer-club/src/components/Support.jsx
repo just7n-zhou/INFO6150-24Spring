@@ -118,7 +118,7 @@ function Support() {
             setEmailError("Email is required.");
             isValid = false;
         } else if (!emailRegex.test(email)) {
-            setEmailError("Please enter a valid email address.");
+            setEmailError("Input valid email address in form of abc@abc.domain");
             isValid = false;
         }
         if (!confirmEmail) {
